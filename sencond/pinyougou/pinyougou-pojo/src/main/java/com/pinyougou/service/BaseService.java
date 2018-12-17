@@ -1,5 +1,6 @@
 package com.pinyougou.service;
 
+import com.pinyougou.pojo.TbBrand;
 import com.pinyougou.vo.PageResult;
 
 import java.io.Serializable;
@@ -27,6 +28,7 @@ public interface BaseService<T> {
     PageResult findPage(Integer page, Integer rows);
 
     PageResult findPage(Integer page, Integer rows, T t);
+
 
 
 }
