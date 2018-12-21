@@ -9,6 +9,7 @@ import com.pinyougou.vo.Result;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RequestMapping("/brand")
 @RestController
@@ -89,5 +90,12 @@ public class BrandController {
         }
 
         return Result.fail("删除失败");
+    }
+    //$http.get("../brand/selectOptionList.do");
+    @GetMapping("/selectOptionList")
+    public List<Map<String,String>> selectOptionList() {
+
+        return brandService.selectOptionList();
+
     }
 }
